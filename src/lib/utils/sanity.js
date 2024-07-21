@@ -20,3 +20,20 @@ export async function getPost(slug) {
 		slug
 	});
 }
+
+export async function getPostsMezczyzni() {
+	return await client.fetch(
+		groq`*[_type == "prod" && (gender=="unisex" || gender == "male") && defined(slug.current)] | order(_createdAt desc)`
+	);
+}
+
+export async function getPostsKobiety() {
+	return await client.fetch(
+		groq`*[_type == "prod" && (gender=="unisex" || gender == "female") && defined(slug.current)] | order(_createdAt desc)`
+	);
+}
+export async function getPostsDzieci() {
+	return await client.fetch(
+		groq`*[_type == "prod" && gender == "kids" && defined(slug.current)] | order(_createdAt desc)`
+	);
+}

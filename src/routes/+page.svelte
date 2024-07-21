@@ -7,29 +7,32 @@
 </script>
 
 <Header />
-<div class="overflow-hidden max-w-4xl mx-auto border-t-2 border-black">
-	<div class="text-black grid grid-inner-2 border-black">
-		{#if data.posts.length}
-			{#each data.posts as post}
-				<a class="p-4" href={`/products/${post.slug.current}`}>
-					<div class="relative flex flex-col grid-cols-1 mx-2 items-center justify-center">
-						<img
-							class="object-contain h-64 mx-auto"
-							src={urlFor(post.images[0]).width(300).height(300).format('webp').url()}
-							alt="Cover image for {post.name}"
-							rel="preload"
-							as="image"
-						/>
-						<h3 class="text-xl mt-3 uppercase font-bold font-body text-xs">
-							{post.name}
-						</h3>
-						<p class="font-body text-sm">{post.currentprice} zł</p>
-					</div>
-				</a>
-			{/each}
-		{:else}
-			<p>no posts available</p>
-		{/if}
-	</div>
+
+<div class="grid grid-cols-2 md:grid-cols-3 max-w-4xl mx-auto font-league uppercase gap-4">
+	<a class="relative max-w-xl mx-auto mt-20 h-64 w-64 m-4" href="/kobiety">
+		<div>
+			<img class="h-64 w-64 object-cover mr-4" src="/welcome-page-image-ww.png" alt="Random " />
+		</div>
+		<div class="h-64 w-64 absolute inset-0 flex items-center justify-center">
+			<h2 class="text-white text-3xl font-bold">Kobiety</h2>
+		</div>
+	</a>
+	<a class="relative max-w-xl mx-auto mt-20 h-64 w-64" href="/mezczyzni">
+		<div>
+			<img class="h-64 w-64 object-cover" src="/welcome-page-image-mw.png" alt="Random " />
+		</div>
+		<div class=" h-64 w-64 absolute inset-0 flex items-center justify-center">
+			<h2 class="text-white text-3xl font-bold">Męzczyźni</h2>
+		</div>
+	</a>
+	<a class="relative max-w-xl mx-auto mt-20 h-64 w-64" href="/dzieci">
+		<div>
+			<img class="h-64 w-64 object-cover" src="/welcome-page-image-kw.png" alt="Random " />
+		</div>
+		<div class=" h-64 w-64 absolute inset-0 flex items-center justify-center">
+			<h2 class="text-white text-3xl font-bold">Dzieci</h2>
+		</div>
+	</a>
 </div>
+
 <Footer />
