@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: "league";
+    src: url("/league.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "haas";
+    src: url("/NeueHaasDisplay-Bold.woff") format("woff");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "haas";
+    src: url("/NeueHaasDisplay-Roman.woff") format("woff");
+    font-weight: normal;
+}
