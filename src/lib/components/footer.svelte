@@ -12,7 +12,7 @@
 </script>
 
 <div class="px-3 max-w-4xl mx-auto mt-20">
-	<Accordion>
+	<Accordion class="mb-20">
 		<AccordionItem class="border border-black text-black">
 			<span slot="header" class="uppercase">Jak robić zakupy i składać zamówienie</span>
 			<p class="my-2 font-bold">Czy potrzebuję konta, aby złożyć zamówienie?</p>
