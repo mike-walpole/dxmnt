@@ -7,7 +7,7 @@
 </script>
 
 <Header />
-<div class="overflow-hidden max-w-4xl mx-auto">
+<div class="overflow-hidden max-w-4xl mx-auto border-t-2 border-black">
 	<div class="text-black grid grid-inner-2 border-black">
 		{#if data.posts.length}
 			{#each data.posts as post}
