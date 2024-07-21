@@ -37,3 +37,8 @@ export async function getPostsDzieci() {
 		groq`*[_type == "prod" && gender == "kids" && defined(slug.current)] | order(_createdAt desc)`
 	);
 }
+export async function getPostsAkcesoria() {
+	return await client.fetch(
+		groq`*[_type == "prod" && category=="accessories" && defined(slug.current)] | order(_createdAt desc)`
+	);
+}
