@@ -39,6 +39,6 @@ export async function getPostsDzieci() {
 }
 export async function getPostsAkcesoria() {
 	return await client.fetch(
-		groq`*[_type == "prod" && category=="accessories" && defined(slug.current)] | order(_createdAt desc)`
+		groq`*[_type == "prod" && cat == "accessories" && defined(slug.current)] | order(_createdAt desc)`
 	);
 }
